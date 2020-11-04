@@ -23,10 +23,9 @@ public enum VADaySupplementary: Hashable {
     // 3 dot max
     case bottomDots([UIColor])
     
-    public var hashValue: Int {
+    public func hash(into hasher: inout Hasher) {
         switch self {
-        case .bottomDots:
-            return 1
+        case .bottomDots: hasher.combine(1)
         }
     }
     
